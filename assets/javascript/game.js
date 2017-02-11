@@ -18,8 +18,8 @@ $(document).ready(function() {
     crystalValue = 0;
   }
   
-  var imgs = ["assets/images/coin2.jpeg", "assets/images/green-mushroom.jpeg", "assets/images/yoshis-egg.jpeg", 
-  "assets/images/red-mushroom.jpeg"];
+  var imgs = ["assets/images/coin2.png", "assets/images/green-mushroom2.png", "assets/images/yoshis-egg.png", 
+  "assets/images/red-mushroom.png"];
 
   for (var i = 0; i < numberOptions.length; i++) {
     var imageMario = $("<img>");
