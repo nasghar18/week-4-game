@@ -1,0 +1,18 @@
+@font-face {
+    font-family: supermario;
+    src: url("../SuperMario256.ttf");
+}
+.crystal-image {
+      width: 200px;
+      height: 200px;
+      padding: 0.5% 0.75% 0.5% 0.5%;
+    }
+body{
+	background-image: url("../images/super-mario-bg.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 150%;
+}
+
+#page{
+font-family: supermario;
+}

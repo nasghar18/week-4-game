@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Super Mario Guesser</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!--<link rel="stylesheet" type="text/css" href="assets/css/reset.css">-->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body>
+  <div id="page">
+    <audio loop="loop" autoplay="autoplay"> 
+      <source src="assets/06-peach-s-castle.mp3" type="audio/mpeg"/>
+    </audio>
+
+    <div class="container" id="content">
+
+        <div>
+
+        <h1>Super Mario Guesser</h1>
+
+        </div>
+
+        <div>
+
+          <h2>Instructions</h2>
+          <p>You will be given a random number at the start of the game.</p>
+          <p>There are four items below. By clicking on an item you will add a specific amount of points to your total score.</p>
+          <p>You win a game by matching your total score to the Target number. You lose a game if your total score goes above the Target number.</p>
+          <p>The value of each item is hidden from you until you click on it.</p>
+          <p>Each time when the resets, the game will change the value of each item</p>
+
+        </div>
+
+        <div>
+          <h3>Target: <span id="number-to-guess"></span></h3>
+        </div>
+
+        <div>
+          <p id="statmessage"></p>
+          <p>Wins: <span id="wins"></span></p>
+          <p>Losses: <span id="losses"></span></p>
+          
+        </div>
+
+        <div id="crystals">
+        </div>
+
+        <div>
+          <h4>Your Score:</h4>
+          <div id="score">
+            
+          </div>
+
+        </div>
+
+
+      <!-- JAVASCRIPT  -->
+      <!-- ========================================= -->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+      <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+    </div>
+
+  </div>
+</body>
+</html>
