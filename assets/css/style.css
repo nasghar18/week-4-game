@@ -8,6 +8,11 @@
       padding: 0.5% 0.75% 0.5% 0.5%;
       margin:0% 2.5% 0% 2.5%;
     }
+
+/*.crystsal-image:hover {
+        background-color:black;
+}*/
+
 body{
 	background-image: url("../images/super-mario-bg.jpg");
 	background-repeat: no-repeat;
@@ -16,4 +21,8 @@ body{
 
 #page{
 font-family: supermario;
+}
+
+#score{
+	font-size: 300%;
 }

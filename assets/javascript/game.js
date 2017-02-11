@@ -23,11 +23,19 @@ $(document).ready(function() {
 
   for (var i = 0; i < numberOptions.length; i++) {
     var imageMario = $("<img>");
-    imageMario.addClass("crystal-image");
+    imageMario.addClass("crystal-image " + i);
     imageMario.attr("src", imgs[i]);
     imageMario.attr("data-crystalvalue", numberOptions[i]);
     $("#crystals").append(imageMario);
   }
+   $(".crystal-image").hover(function() {
+        $(this).animate({ height: "225px", width: "225px", margin: "0% 2.5% 0% 2.5%", padding:"0.5% 0.75% 0.5% 0.5%"});
+      }, function(){
+        $(this).animate({ height: "200px", width: "200px", margin:"0% 2.5% 0% 2.5%", padding:"0.5% 0.75% 0.5% 0.5%"});
+    });
+   //$(".crystal-image").mouseout(function() {
+        //$(this).animate({ height: "200px", width:"200px"});
+    //});
   $(".crystal-image").on("click", function() {
     
     var crystalValue = ($(this).attr("data-crystalvalue"));
@@ -40,12 +48,14 @@ $(document).ready(function() {
     if (counter === targetNumber) {
       wins++;
       $("#wins").text(wins);
+      $("#statmessage").text("You won!");
       resetgame();
       target();
     }
     else if (counter >= targetNumber) {
       losses++;
       $("#losses").text(losses);
+      $("#statmessage").text("You lost!");
       resetgame();
       target();
     }
