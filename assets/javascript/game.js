@@ -2,6 +2,9 @@ $(document).ready(function() {
   
   var wins = 0;
   var losses = 0;
+  var coinaud = document.getElementById("coinAudio");
+  var mushaud = document.getElementById("mushroomAudio");
+  var yoshaud = document.getElementById("yoshiAudio");
 
   function target(){
   var targetNumber = Math.floor(Math.random() * 102 + 19);
@@ -17,6 +20,18 @@ $(document).ready(function() {
     $("#crystals").empty();
     crystalValue = 0;
   }
+
+  function playcoin() {
+    coinaud.play();
+  }
+
+  function playmush() {
+    mushaud.play();
+  }
+
+  function playyosh() {
+    yoshaud.play();
+  } 
   
   var imgs = ["assets/images/coin2.png", "assets/images/green-mushroom2.png", "assets/images/yoshis-egg.png", 
   "assets/images/red-mushroom.png"];
@@ -36,6 +51,31 @@ $(document).ready(function() {
    //$(".crystal-image").mouseout(function() {
         //$(this).animate({ height: "200px", width:"200px"});
     //});
+
+  $(".crystal-image").on("click", function() {
+    if ( $( this ).hasClass( "0" ) ) {
+        playcoin();
+    }
+});
+
+  $(".crystal-image").on("click", function() {
+    if ( $( this ).hasClass( "1" ) ) {
+        playmush();
+    }
+});
+
+  $(".crystal-image").on("click", function() {
+    if ( $( this ).hasClass( "2" ) ) {
+        playyosh();
+    }
+});
+
+  $(".crystal-image").on("click", function() {
+    if ( $( this ).hasClass( "3" ) ) {
+        playmush();
+    }
+});
+
   $(".crystal-image").on("click", function() {
     
     var crystalValue = ($(this).attr("data-crystalvalue"));
